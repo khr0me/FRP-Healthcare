@@ -1,0 +1,12 @@
+{
+    "build": {
+      "env": {
+        "DJANGO_SETTINGS_MODULE": "hackaton_project.settings.production"
+      }
+    },
+    "routes": [
+      { "src": "/static/(.*)", "dest": "/static/$1" },
+      { "src": "/(.*)", "dest": "index.html" }
+    ]
+  }
+  

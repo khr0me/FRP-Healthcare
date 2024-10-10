@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-e)&4wfsmgk*$$t*vla756(65hur*yi!-o6uxfjh3ium$11#7g)'
 
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hackaton_project.vercel.app', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'hackaton_app.apps.HackatonAppConfig',
