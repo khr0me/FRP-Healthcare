@@ -1,12 +1,13 @@
 {
-    "build": {
-      "env": {
-        "DJANGO_SETTINGS_MODULE": "hackaton_project.settings.production"
+  "builds": [{
+      "src": "hackaton_project/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+  }],
+  "routes": [
+      {
+          "src": "/(.*)",
+          "dest": "hackaton_project/wsgi.py"
       }
-    },
-    "routes": [
-      { "src": "/static/(.*)", "dest": "/static/$1" },
-      { "src": "/(.*)", "dest": "index.html" }
-    ]
-  }
-  
+  ]
+}
